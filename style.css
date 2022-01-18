@@ -1,0 +1,228 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body{
+    display: grid;
+    
+    height: 100vh;
+  
+
+}
+.container{
+    height: 400px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+.container .dinosuar{
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    bottom: 28px;
+    left: 20px;
+    /* animation: Rotate .8s linear infinite; */
+
+}
+.top{
+    height: 150px;
+    width: 100%;
+    background-color:rgb(0, 85, 0);
+    position: absolute;
+    margin-top: 125px;
+}
+.grace{
+    height: 150px;
+    width: 100%;
+    /* background-color: rgb(0, 85, 0); */
+}
+.dinosuar img{
+    height: 100px;
+    width: 80px;
+    margin-top: -35px;
+    margin-left: 50px;
+}
+.dinosuarActive{
+    animation: Rotate .6s linear infinite;
+}
+@keyframes Rotate {
+    0%,100%{
+        bottom: 28px;
+    }
+    45%,55%{
+        bottom: 180px;
+    }
+}
+.container .block{
+    height: 80px;
+    width: 125px;
+    position: absolute;
+    bottom: 20px;
+    right: -20px;
+    animation: blockAnimation 2s linear infinite;
+}
+.container .block img{
+    height: 60px;
+    width: 60px;
+    margin-top: -20px;
+   
+}
+.active{
+    animation: blockAnimation 1s linear infinite;
+}
+@keyframes blockAnimation{
+    0%{
+        right: -125px;
+
+    }
+    100%{
+        right: 100%;
+    }
+    
+}
+.road{
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    background-color: rgb(241, 237, 237);
+    bottom: 0;
+    z-index: -3;
+    border: 1px solid rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+}
+.road div p{
+    
+    width: 100%;
+    background-color: rgb(230, 223, 223);
+    position: absolute;
+    border: 2px dashed rgb(10, 8, 8);
+    z-index: -3;
+     
+}
+.cloud img{
+    margin-left: 40px;
+    height: 90px;
+
+}
+.cloud{
+    position: relative;
+    width: 100%;
+
+}
+.cloud div{
+    position: absolute;
+    animation-name: cloudAnimation;
+    animation-duration: .7s;
+    
+}
+.cloud div img{
+    animation-name: cloudAnimation;
+    animation-duration: 7s;
+    animation-fill-mode: both;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+}
+#cl1{
+    margin: 20px 0px 0px 40px;
+    
+}
+#cl2{
+    margin-left: 400px;
+}
+#cl4{
+    margin-left: 700px;
+    margin-top: 30px;
+}
+@keyframes cloudAnimation{
+    0%{
+        transform:translateX(-1200px);
+       
+    }
+    100%{
+        transform: translateX(1800px);
+    }
+    
+}
+.score{
+    height: auto;
+    width: auto;
+
+
+}
+.result{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#score{
+    margin-right: 100px;
+    font-size: 2rem;
+}
+#gameover{
+    font-size: 3rem;
+
+    display: none;
+    left: calc(50%-181px);
+    top: calc(50% -40px);
+    color: red;
+}
+
+/* block of start the page  */
+.start_page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px;
+}
+.player{
+    color: rgb(13, 0, 196);
+}
+.player div input{
+    margin: 30px 0px;
+    width: 600px;
+    height: 40px;
+    border-radius:5px;
+    outline: none;
+    border: 3px solid black;
+    color: blue;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.character{
+    margin-top: 30px;
+}
+.character h1{
+    color: brown;
+}
+.character img{
+  margin-top: 20px;
+  height: 100px;
+  margin-bottom: 80px;
+}
+.btn_start a button{
+    height: 50px;
+    width: 300px;
+    color: rgb(255, 255, 255);
+    font-size: 1.4rem;
+    background: linear-gradient(to right, rgb(48, 10, 83), rgb(117, 61, 180) , rgb(48, 10, 83));
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    
+}
+.information{
+    position: absolute;
+    margin-top:140px;
+    margin-left: 30px;
+}
+.information p{
+    font-size: 1.3rem;
+    color: rgb(187, 21, 21);
+}
